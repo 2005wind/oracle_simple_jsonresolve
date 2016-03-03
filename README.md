@@ -1,7 +1,10 @@
 # oracle_simple_jsonresolve
+
 oracle json 解析的临时处理方式
 参考来自：http://www.oschina.net/code/snippet_1162040_48289
+
 并处理解决了：value内如果用：符号出现的截取错误。
+
 使用范例1：
 select json.parsejson('{"rta":"0.19","status":"0","msg":"PING OK - Packet loss \u003d 0%, RTA \u003d 0.19 ms","packetloss":"0"}','rta') from dual;
 

@@ -6,9 +6,11 @@ oracle json 解析的临时处理方式
 并处理解决了：value内如果用：符号出现的截取错误。
 
 使用范例1：
+
 select json.parsejson('{"rta":"0.19","status":"0","msg":"PING OK - Packet loss \u003d 0%, RTA \u003d 0.19 ms","packetloss":"0"}','rta') from dual;
 
 使用范例2(具体参照)：
+
 declare 
 rta varchar2(10) := null;
 status varchar2(10) :=null;
@@ -25,4 +27,5 @@ msg :=JSON_ALL(msg);
 packetloss :=JSON_ALL(packetloss);
 
 dbms_output.put_line(rta||','||status||','||msg||','||packetloss);
-end
+
+end;
